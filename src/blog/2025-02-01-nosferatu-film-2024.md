@@ -12,7 +12,8 @@ description: Nosferatu est un film d'horreur gothique américain réalisé par
 author: Robert Eggers
 date: 2025-02-01T14:55:00.000Z
 tags:
-  ? post
+  - post
+  - featured
 image: https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Nosferatu2024.png/1280px-Nosferatu2024.png
 imageAlt: Logo original du film.
 ---
