@@ -2,7 +2,7 @@ backend:
   name: git-gateway
   branch: main
 
-media_folder: "public"
+media_folder: "public/assets/blog"
 public_folder: "/assets/blog"
 
 collections: 
@@ -11,7 +11,7 @@ collections:
     files: # Doit être précisé pour gérer un fichier unique.
       - label: "Home Page Content"
         name: "home"
-        file: "src/index.njk" # Chemin vers ton fichier
+        file: "src/content/homepage.json"
         create: false # Empêche la création de nouvelles entrées
         delete: false # Empêche la suppression
         fields:
