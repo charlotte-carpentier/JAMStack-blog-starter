@@ -15,8 +15,8 @@ collections:
         create: false # Empêche la création de nouvelles entrées
         delete: false # Empêche la suppression
         fields:
-          - { label: "Hero Title", name: "hero_title", widget: "string" }
-          - { label: "Hero Content", name: "hero_content", widget: "text" }
+          - { label: "Home Title", name: "hero_title", widget: "string" }
+          - { label: "Home Content", name: "hero_content", widget: "text" }
 
   - name: "blog"
     label: "Blog"
