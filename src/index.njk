@@ -3,37 +3,18 @@ title: My homepage
 layout: 'base.njk'
 ---
 
-{% if collections.homepage and collections.homepage | length > 0 %}
-  {% set homepage = collections.homepage | first %}
-
-  <section class="hero">
-    <div class="container flow">
-      <div class="hero__content flow">
-        <h1 class="section-title">{{ homepage.hero_title }}</h1>
-        <p>{{ homepage.hero_content }}</p>
-        <div class="flex-group">
-          <a href="#featured-articles" class="btn btn--primary">Featured articles</a>
-          <a href="./blog.html" class="btn btn--neutral">Most recent articles</a>
-        </div>
-      </div>
-      <div>
-        <img src="//unsplash.it/510" alt="" class="hero__image">
-      </div>
-    </div>
-  </section>
-
-{% else %}
-  <p>No homepage content found.</p>
-{% endif %}
+{% include 'hero.njk' %}}
 
 <section id="featured-articles" class="featured-articles">
   <div class="container flow">
-    <h2 class="section-title text-center">Featured articles</h2>
+    <h2 class="section-title text-center ">Featured articles</h2>
     <p class="text-center">Here is a sample of articles which I feel give you a good idea of what this site is all about.</p>
     <ul role="list" class="articles_list flow">
+
       {%- for post in collections.featured | reverse -%}
         {% include 'article-snippet.njk' %}
       {%- endfor -%}
+
     </ul>
   </div>
 </section>
