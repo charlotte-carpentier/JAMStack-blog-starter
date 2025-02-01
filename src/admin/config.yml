@@ -13,14 +13,14 @@ collections:
         create: false # Empêche la création de nouvelles entrées
         delete: false # Empêche la suppression
         fields:
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Main Content", name: "content", widget: "markdown" }
+          - { label: "Hero Title", name: "hero_title", widget: "string" }
+          - { label: "Hero Content", name: "hero_content", widget: "text" }
   - name: "blog"
     label: "Blog"
     folder: "src/blog" 
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    fields: 
+    fields: s
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Description", name: "description", widget: "string" }
       - { label: "Author", name: "author", widget: "string" }
