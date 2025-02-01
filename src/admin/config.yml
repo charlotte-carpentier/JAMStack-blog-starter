@@ -4,9 +4,20 @@ backend:
 media_folder: "public/assets/blog"
 public_folder: "/assets/blog"
 collections: 
+  - name: "homepage"
+    label: "Home Page"
+    files: # Doit être précisé pour gérer un fichier unique.
+      - label: "Home Page Content"
+        name: "home"
+        file: "src/index.njk" # Chemin vers ton fichier
+        create: false # Empêche la création de nouvelles entrées
+        delete: false # Empêche la suppression
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Main Content", name: "content", widget: "markdown" }
   - name: "blog"
     label: "Blog"
-    folder: "src/blog"
+    folder: "src/blog" 
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields: 
