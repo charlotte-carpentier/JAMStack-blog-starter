@@ -9,14 +9,14 @@ collections:
   - name: "homepage"
     label: "Home Page"
     files: # Doit être précisé pour gérer un fichier unique.
-      - label: "Home Page Content"
-        name: "home"
-        file: "src/content/homepage.json"
+      - label: "Hero Content"
+        name: "hero"
+        file: "src/hero"
         create: false # Empêche la création de nouvelles entrées
         delete: false # Empêche la suppression
         fields:
           - { label: "Home Title", name: "hero_title", widget: "string" }
-          - { label: "Home Content", name: "hero_content", widget: "text" }
+          - { label: "Home Content", name: "hero_content", widget: "string" }
 
   - name: "blog"
     label: "Blog"
