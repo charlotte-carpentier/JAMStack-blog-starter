@@ -7,16 +7,7 @@ description: "Nosferatu is a 2024 American gothic horror film written and
   The supporting cast includes Aaron Taylor-Johnson, Emma Corrin, Ralph Ineson,
   Simon McBurney, and Willem Dafoe.  Development began in 2015, when Eggers
   planned to make it his second film; he described it as a passion project, but
-  eventually opted to delay its production. Skarsgård and Depp were cast in lead
-  roles in September 2022. Filming took place primarily at Barrandov Studios in
-  Prague between February and May 2023.  Nosferatu had its world premiere in
-  Berlin on December 2, 2024, and theatrically released in the United States by
-  Focus Features and internationally by Universal Pictures on December 25. The
-  film received generally positive reviews from critics and has grossed $167
-  million worldwide on a $50 million budget, becoming Eggers's highest-grossing
-  film. At the 97th Academy Awards, the film earned nominations for Best
-  Cinematography, Best Costume Design, Best Production Design, and Best Makeup
-  and Hairstyling."
+  eventually opted to delay its production. "
 author: Robert Eggers
 date: 2025-02-01T14:55:00.000Z
 tags:
