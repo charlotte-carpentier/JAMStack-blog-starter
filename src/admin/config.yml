@@ -1,37 +1,36 @@
 backend:
-  name: git-gateway  # Uses Git Gateway to authenticate and manage content via Git
-  branch: main       # Specifies that changes will be committed to the "main" branch
+  name: git-gateway  # Authenticate and manage content via Git
+  branch: main       # Changes committed here
 
-media_folder: "public/assets/blog"  # Defines where uploaded media files are stored in the repository
-public_folder: "/assets/blog"       # Defines the public URL path for accessing media files
+media_folder: "public/assets/blog"  # To store media
+public_folder: "/assets/blog"       # URL path for accessing media files
 
 collections: 
-  - name: "homepage"  # Defines a collection named "homepage" for managing homepage content
-    label: "Home Page"  # The label displayed in the Netlify CMS UI
-    files:  # Used instead of "folder" to manage a single file rather than multiple entries
-      - label: "Hero Content"  # The section name in the CMS for editing hero content
-        name: "hero"  # Internal name for this file entry
-        file: "src/hero"  # The file path in the repository where the data is stored
-        create: false  # Prevents users from creating additional hero files
-        delete: false  # Prevents users from deleting the hero file
-        fields:  # Defines the editable fields for the hero section
-          - { label: "Title", name: "title", widget: "string" }  # Hero title input
-          - { label: "Paragraph 01", name: "paragraph01", widget: "text" }  # First paragraph
-          - { label: "Paragraph 02", name: "paragraph02", widget: "text" }  # Second paragraph
-          - { label: "Image", name: "image", widget: "image" }  # Hero image upload field
-          - { label: "Image Alt Text", name: "imageAlt", widget: "string" }  # Alternative text for accessibility
-
-  - name: "blog"  # Defines a collection for blog posts
-    label: "Blog"  # Display name in the Netlify CMS UI
-    folder: "src/blog"  # Specifies where blog posts are stored in the repository
-    create: true  # Allows users to create new blog posts
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"  # Defines the URL slug format for blog posts (based on date and title)
-    fields:  # Defines the editable fields for blog posts
-      - { label: "Title", name: "title", widget: "string" }  # Blog post title
-      - { label: "Description", name: "description", widget: "string" }  # Short description of the post
-      - { label: "Author", name: "author", widget: "string" }  # Author name field
-      - { label: "Date", name: "date", widget: "datetime" }  # Date picker for post publication
-      - { label: "Tags", name: "tags", widget: "list", default: {"post"} }  # List of tags (defaulting to "post")
-      - { label: "Featured Image", name: "image", widget: "image" }  # Upload field for the featured image
-      - { label: "Image caption", name: "imageAlt", widget: "string" }  # Caption or alt text for the featured image
-      - { label: "Body", name: "body", widget: "markdown" }  # Main content area with Markdown support
+  - name: "homepage"  
+    label: "Home Page"  
+    files:  # To manage a single file rather than multiple entries
+      - label: "Hero Content"  
+        name: "hero"  
+        file: "src/_section/hero.json"  # The file where is data
+        create: false
+        delete: false
+        fields: 
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Paragraph 01", name: "paragraph01", widget: "text" }
+          - { label: "Paragraph 02", name: "paragraph02", widget: "text" }
+          - { label: "Image", name: "image", widget: "image" }
+          - { label: "Image Alt Text", name: "imageAlt", widget: "string" }
+  - name: "blog"
+    label: "Blog"
+    folder: "src/blog"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Author", name: "author", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Tags", name: "tags", widget: "list", default: {"post"} }
+      - { label: "Featured Image", name: "image", widget: "image" }
+      - { label: "Image caption", name: "imageAlt", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
