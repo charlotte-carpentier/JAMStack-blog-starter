@@ -11,7 +11,7 @@ collections:
     files:  # To manage a single file rather than multiple entries
       - label: "Hero Content"  
         name: "hero"  
-        file: "src/_section/hero.json"  # The file where is data
+        file: "src/_data/hero.json"  # The file where is data
         create: false
         delete: false
         fields: 
